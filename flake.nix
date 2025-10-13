@@ -1,5 +1,5 @@
 {
-  description = "CKAD Study Environment";
+  description = "Kubestronaut Study Environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -16,18 +16,17 @@
 
       in {
         devShells.default = pkgs.mkShell {
-          name = "ckad";
+          name = "kubestronaut";
 
           buildInputs = with pkgs; [
             kubectl
             kubernetes-helm
-
-            pre-commit
-            just
-            direnv
-            zsh
+            k9s
+            kind
+            trivy
+            jq
+            yq
           ];
         };
       });
 }
-

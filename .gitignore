@@ -1,1 +1,13 @@
+# Direnv
 .direnv/**
+
+# User exercise solutions
+*.yaml
+*.yml
+!configs/**/*.yaml
+!configs/**/*.yml
+!.pre-commit-config.yaml
+!.markdownlint.yaml
+
+# Kubernetes configs
+.kube/

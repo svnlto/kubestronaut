@@ -1,0 +1,21 @@
+# Markdownlint configuration
+# See https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# Default state for all rules
+default: true
+
+# MD013/line-length - Line length
+MD013:
+  line_length: 120
+  code_blocks: false
+  tables: false
+
+# MD033/no-inline-html - Inline HTML
+MD033: false  # Allow HTML in markdown (useful for collapsible sections)
+
+# MD041/first-line-heading - First line in file should be a top level heading
+MD041: false  # Allow flexibility in file structure
+
+# MD024/no-duplicate-heading - Multiple headings with the same content
+MD024:
+  siblings_only: true  # Allow duplicate headings if not siblings

@@ -1,0 +1,40 @@
+# Multi-node kind cluster for CKA/CKS practice
+# Simulates realistic production topology
+
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: kubestronaut-multi
+nodes:
+  # Control plane node
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "ingress-ready=true"
+    extraPortMappings:
+      - containerPort: 80
+        hostPort: 80
+        protocol: TCP
+      - containerPort: 443
+        hostPort: 443
+        protocol: TCP
+
+  # Worker nodes
+  - role: worker
+    labels:
+      tier: frontend
+
+  - role: worker
+    labels:
+      tier: backend
+
+  - role: worker
+    labels:
+      tier: data
+
+# Networking configuration
+networking:
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: "10.96.0.0/12"

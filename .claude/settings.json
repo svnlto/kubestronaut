@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(kubectl config:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl logs:*)"
+    ]
+  },
+  "outputStyle": "Training Mode"
+}
