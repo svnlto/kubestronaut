@@ -276,7 +276,7 @@ Remember: In the real CKAD exam:
 - 2 hours for ~17 questions
 - Average 7 minutes per question
 - Speed = points
-- kubectl.io/docs is allowed (but slow)
+- kubernetes.io/docs is allowed (but slow)
 - Imperative > YAML when possible
 - Verify before moving on
 
