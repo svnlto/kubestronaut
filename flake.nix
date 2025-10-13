@@ -26,6 +26,7 @@
             trivy
             jq
             yq
+            just
           ];
         };
       });

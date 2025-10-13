@@ -8,6 +8,43 @@ Kubestronaut is the highest level of Kubernetes certification achievement, award
 have earned all five Kubernetes certifications from the Cloud Native Computing Foundation (CNCF)
 and The Linux Foundation.
 
+## Prerequisites
+
+- Docker or Podman
+- kubectl
+- kind (included in Nix flake)
+
+Using Nix:
+
+```bash
+nix develop
+```
+
+Or install manually: kubectl, kind, helm, k9s, trivy
+
+## Getting Started
+
+1. **Setup environment**:
+
+   ```bash
+   nix develop  # or install tools manually
+   kind create cluster --config=configs/cluster/kind-single-node.yaml
+   ```
+
+2. **Generate exercises**: Ask a tutor to create exercises for your target certification
+
+3. **Practice with Training Mode**: Get hints and guidance while learning
+
+4. **Test with Exam Mode**: Validate without assistance under exam conditions
+
+## Workflow
+
+1. Use a certification tutor agent to create exercises for a topic
+2. Start in **Training Mode** for initial practice with hints
+3. Complete exercises and validate with `/validate-exercise`
+4. Switch to **Exam Mode** for realistic exam simulation
+5. Retry exercises without assistance to build confidence
+
 ## Certification Path
 
 Complete all five certifications in this recommended order:
@@ -34,20 +71,6 @@ Complete all five certifications in this recommended order:
   - `agents/` - Specialized tutors (kcna-tutor, kcsa-tutor, cka-tutor, ckad-tutor, cks-tutor)
   - `commands/` - Custom slash commands (validate-exercise)
   - `output-styles/` - Training and Exam modes
-
-## Usage
-
-Each exercise includes:
-
-- Task requirements
-- Verification steps
-- Time estimates
-
-Validate completed exercises using:
-
-```bash
-/validate-exercise <exercise-name>
-```
 
 ## Claude Code Setup
 
@@ -83,19 +106,19 @@ Agents available:
 - **CKAD Tutor** - Application development exercises
 - **CKS Tutor** - Advanced security exercises
 
-## Prerequisites
+### Exercise Validation
 
-- Docker or Podman
-- kubectl
-- kind (included in Nix flake)
+Each exercise includes:
 
-Using Nix:
+- Task requirements
+- Verification steps
+- Time estimates
+
+Validate completed exercises using:
 
 ```bash
-nix develop
+/validate-exercise <exercise-name>
 ```
-
-Or install manually: kubectl, kind, helm, k9s, trivy, etcdctl
 
 ## Environment
 
@@ -122,42 +145,6 @@ kind delete cluster --name kubestronaut-single
 # or
 kind delete cluster --name kubestronaut-multi
 ```
-
-## Getting Started
-
-1. **Setup environment**:
-
-   ```bash
-   nix develop  # or install tools manually
-   just cluster-single  # or use kind create cluster directly
-   ```
-
-2. **Generate exercises**: Ask a tutor to create exercises for your target certification
-
-3. **Practice with Training Mode**: Get hints and guidance while learning
-
-4. **Test with Exam Mode**: Validate without assistance under exam conditions
-
-### Quick Commands (using just)
-
-```bash
-just validate basic-cronjob    # Validate an exercise
-just cluster-single             # Create single-node cluster
-just cluster-multi              # Create multi-node cluster
-just training-mode              # Switch to training mode
-just exam-mode                  # Switch to strict exam mode
-just cluster-info               # Show cluster status
-```
-
-See `just` for all available commands.
-
-## Workflow
-
-1. Use a certification tutor agent to create exercises for a topic
-2. Start in **Training Mode** for initial practice with hints
-3. Complete exercises and validate with `/validate-exercise`
-4. Switch to **Exam Mode** for realistic exam simulation
-5. Retry exercises without assistance to build confidence
 
 ## Notes
 
