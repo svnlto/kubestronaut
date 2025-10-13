@@ -129,7 +129,7 @@ kind delete cluster --name kubestronaut-multi
 
    ```bash
    nix develop  # or install tools manually
-   kind create cluster --config=configs/cluster/kind-single-node.yaml
+   just cluster-single  # or use kind create cluster directly
    ```
 
 2. **Generate exercises**: Ask a tutor to create exercises for your target certification
@@ -137,6 +137,19 @@ kind delete cluster --name kubestronaut-multi
 3. **Practice with Training Mode**: Get hints and guidance while learning
 
 4. **Test with Exam Mode**: Validate without assistance under exam conditions
+
+### Quick Commands (using just)
+
+```bash
+just validate basic-cronjob    # Validate an exercise
+just cluster-single             # Create single-node cluster
+just cluster-multi              # Create multi-node cluster
+just training-mode              # Switch to training mode
+just exam-mode                  # Switch to strict exam mode
+just cluster-info               # Show cluster status
+```
+
+See `just` for all available commands.
 
 ## Workflow
 
