@@ -9,5 +9,11 @@
 !.pre-commit-config.yaml
 !.markdownlint.yaml
 
+# Solutions directory (ignore all except structure files)
+solutions/**/*
+!solutions/.gitkeep
+!solutions/README.md
+!solutions/**/README.md
+
 # Kubernetes configs
 .kube/
