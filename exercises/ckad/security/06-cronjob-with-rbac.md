@@ -1,4 +1,4 @@
-# Exercise 7: Cleanup Old Resources CronJob (★★★)
+# Exercise 6: Cleanup CronJob with RBAC (★★★)
 
 Time: 10-12 minutes
 

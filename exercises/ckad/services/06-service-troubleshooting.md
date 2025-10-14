@@ -4,29 +4,58 @@ Time: 8-10 minutes
 
 ## Task
 
-Debug a broken service setup:
+A deployment exists but the service cannot reach the pods. Debug and fix the broken service:
 
-1. Create a deployment named `broken-app` with image `nginx:alpine`, 3 replicas, label `app=broken`
-2. Create a service named `broken-service` with intentional issues:
-   - Wrong selector (should be `app=broken` but use `app=wrong`)
-   - Wrong targetPort (use 8080 instead of 80)
-3. Verify the service doesn't work
-4. Create a fixed service named `fixed-service` with correct configuration
-5. Verify the fixed service works
+**Step 1:** First, create the deployment:
+
+```bash
+kubectl create deployment webapp --image=nginx:alpine --replicas=3
+kubectl label deployment webapp app=webapp
+```
+
+**Step 2:** The following service manifest has errors. Apply it and debug:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: broken-service
+spec:
+  selector:
+    app: wrong-label
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP
+```
+
+Your tasks:
+
+1. Apply the broken service manifest
+2. Use debugging commands to identify why the service has no endpoints
+3. Find the issues:
+   - Selector doesn't match deployment labels (should be `app: webapp`)
+   - Target port is wrong (should be `80`, not `8080`)
+4. Create a corrected service named `fixed-service`
+5. Verify connectivity works through the fixed service
 
 ## Hint
 
-Use `kubectl get endpoints` to check if the service found any pods. Empty endpoints usually mean selector mismatch.
-Use `kubectl describe svc` to see the selector and target port. Test connectivity with a temporary pod.
+Use `kubectl get endpoints broken-service` to check if any pods are selected (empty means selector mismatch).
+Check deployment labels with `kubectl get deployment webapp --show-labels`. Compare service selector with pod labels.
+Test connectivity: `kubectl run test-pod --image=busybox --rm -it --restart=Never -- wget -O- service-name:80`
 
 ## Verification
 
 Check that:
 
-- Broken service has no endpoints: `kubectl get endpoints broken-service` (should be empty)
-- Fixed service has 3 endpoints: `kubectl get endpoints fixed-service`
-- Selector is correct: `kubectl get svc fixed-service -o jsonpath='{.spec.selector}'`
-- TargetPort is correct: `kubectl get svc fixed-service -o jsonpath='{.spec.ports[0].targetPort}'`
-- Service works: `kubectl run test --image=busybox --rm -it --restart=Never -- wget -O- fixed-service:80`
+- Broken service has no endpoints: `kubectl get endpoints broken-service` (should show `<none>`)
+- Fixed service has 3 endpoints: `kubectl get endpoints fixed-service` (should show 3 pod IPs)
+- Selector matches: `kubectl get svc fixed-service -o jsonpath='{.spec.selector.app}'` (should be `webapp`)
+- TargetPort is correct: `kubectl get svc fixed-service -o jsonpath='{.spec.ports[0].targetPort}'` (should be `80`)
+- Service works: `kubectl run test --image=busybox --rm -it --restart=Never -- wget -qO- fixed-service:80`
+  (should return nginx welcome page)
 
-**Useful commands:** `kubectl get endpoints`, `kubectl describe svc`, `kubectl logs`, `kubectl run` for testing
+**Useful commands:** `kubectl get endpoints`, `kubectl describe svc`, `kubectl get pods --show-labels`,
+`kubectl run` for testing

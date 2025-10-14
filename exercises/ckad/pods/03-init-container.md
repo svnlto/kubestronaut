@@ -8,14 +8,16 @@ Create a pod that:
 
 - Is named `init-demo`
 - Has a main container named `main` using image `nginx:alpine`
+  - Command: `['/bin/sh', '-c']`
+  - Args: `['echo App started && nginx -g "daemon off;"']`
 - Has an init container named `init-setup` using image `busybox:1.35`
-- The init container runs: `sh -c "echo 'Initializing...' && sleep 5"`
-- The main container has a command: `sh -c "echo 'App started' && nginx -g 'daemon off;'"`
+  - Command: `sh -c "echo 'Initializing...' && sleep 5"`
 
 ## Hint
 
-Use `kubectl run --dry-run=client -o yaml` to generate base YAML, then add the `initContainers` section at the same
-level as `containers` under `spec`. The init container runs to completion before the main container starts.
+Use `kubectl run --dry-run=client -o yaml` to generate base YAML, then add the
+`initContainers` section at the same level as `containers` under `spec`. The init container
+runs to completion before the main container starts.
 
 ## Verification
 

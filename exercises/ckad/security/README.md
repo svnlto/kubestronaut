@@ -10,6 +10,9 @@ is essential for building secure applications and is heavily tested in CKAD.
 3. [ServiceAccount](03-serviceaccount.md) (★★☆) - 6-7 minutes
 4. [Resource Limits](04-resource-limits.md) (★★☆) - 5-6 minutes
 5. [RBAC - Role and RoleBinding](05-rbac-basic.md) (★★★) - 8-10 minutes
+6. [CronJob with RBAC](06-cronjob-with-rbac.md) (★★★) - 10-12 minutes
+
+**Note:** Exercise 6 combines CronJobs with RBAC. Complete exercises 3 and 5 first.
 
 ## Quick Reference
 

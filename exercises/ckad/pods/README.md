@@ -12,6 +12,15 @@ multi-container patterns, and debugging is critical for the CKAD exam.
 5. [Ambassador Container Pattern](05-ambassador-pattern.md) (★★☆) - 6-8 minutes
 6. [Adapter Container Pattern](06-adapter-pattern.md) (★★★) - 8-10 minutes
 7. [Pod Debugging and Troubleshooting](07-pod-troubleshooting.md) (★★★) - 8-12 minutes
+8. [Pod with Environment Variables from ConfigMap and Secret](08-pod-with-env-vars.md) (★★☆) - 5-7 minutes
+9. [Pod with Multiple Init Containers](09-multiple-init-containers.md) (★★☆) - 6-8 minutes
+10. [Pod with Liveness and Readiness Probes](10-pod-with-probes.md) (★★☆) - 6-8 minutes
+11. [Pod with Node Affinity and Node Selector](11-pod-with-node-affinity.md) (★★☆) - 5-7 minutes
+12. [Pod with Security Context](12-pod-with-security-context.md) (★★★) - 7-9 minutes
+13. [Pod with Persistent Volume Claim](13-pod-with-pvc.md) (★★☆) - 6-8 minutes
+14. [Pod with Service Account](14-pod-with-service-account.md) (★★☆) - 5-7 minutes
+15. [Pod with Startup, Liveness, and Readiness Probes](15-pod-with-startup-probe.md) (★★★) - 8-10 minutes
+16. [YAML Syntax Debugging](16-yaml-syntax-debugging.md) (★★☆) - 5-7 minutes
 
 ## Quick Reference
 

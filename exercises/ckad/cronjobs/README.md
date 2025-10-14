@@ -10,7 +10,6 @@ These exercises focus on Kubernetes CronJobs - a critical topic for the CKAD exa
 4. [Suspend and Resume](04-suspend-resume.md) (★☆☆) - 3-5 minutes
 5. [Multi-Container CronJob](05-multi-container.md) (★★★) - 8-10 minutes
 6. [Timezone Configuration](06-timezone.md) (★★☆) - 5 minutes
-7. [Cleanup with RBAC](07-cleanup-with-rbac.md) (★★★) - 10-12 minutes
 
 ## Quick Reference
 

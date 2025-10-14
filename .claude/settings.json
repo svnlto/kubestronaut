@@ -4,7 +4,10 @@
       "Bash(kubectl config:*)",
       "Bash(kubectl describe:*)",
       "Bash(kubectl get:*)",
-      "Bash(kubectl logs:*)"
+      "Bash(kubectl logs:*)",
+      "Bash(kubectl create:*)",
+      "Bash(kubectl delete:*)",
+      "Bash(kubectl exec:*)"
     ]
   },
   "outputStyle": "Training Mode"
