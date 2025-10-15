@@ -95,60 +95,70 @@ Every exercise directory needs a README.md with:
 4. **Common Exam Topics**: Real exam security question patterns
 5. **Tips for KCSA Exam**: Security DO's and DON'Ts specific to this topic
 
-## KCSA Topics Coverage
+## KCSA Topics Coverage (Official Curriculum)
 
 Create exercises for these exam domains:
 
 ### Overview of Cloud Native Security (14%)
 
-- Cloud native security principles
-- Shared responsibility model
-- Defense in depth
-- Least privilege
-- Security boundaries
+- The 4Cs of Cloud Native Security
+- Cloud Provider and Infrastructure Security
+- Controls and Frameworks
+- Isolation Techniques
+- Artifact Repository and Image Security
+- Workload and Application Code Security
 
 ### Kubernetes Cluster Component Security (22%)
 
-- Control plane security
-- Node security
-- API server security
-- etcd security
-- Kubelet security
-- Container runtime security
+- API Server
+- Controller Manager
+- Scheduler
+- Kubelet
+- Container Runtime
+- KubeProxy
+- Pod
+- Etcd
+- Container Networking
+- Client Security
+- Storage
 
 ### Kubernetes Security Fundamentals (22%)
 
-- Pod security standards
-- Network policies basics
-- Secrets management basics
-- RBAC fundamentals
-- Service accounts
-- Security contexts
+- Pod Security Standards
+- Pod Security Admissions
+- Authentication
+- Authorization
+- Secrets
+- Isolation and Segmentation
+- Audit Logging
+- Network Policy
 
 ### Kubernetes Threat Model (16%)
 
-- Common attack vectors
-- Container threats
-- Network threats
-- Supply chain risks
-- Insider threats
-- Misconfigurations
+- Kubernetes Trust Boundaries and Data Flow
+- Persistence
+- Denial of Service
+- Malicious Code Execution and Compromised Applications in Containers
+- Attacker on the Network
+- Access to Sensitive Data
+- Privilege Escalation
 
 ### Platform Security (16%)
 
-- Image security basics
-- Registry security
-- Build security
-- Deployment security
-- Infrastructure security
+- Supply Chain Security
+- Image Repository
+- Observability
+- Service Mesh
+- PKI
+- Connectivity
+- Admission Control
 
 ### Compliance and Security Frameworks (10%)
 
-- Security frameworks (NIST, CIS)
-- Compliance requirements
-- Audit logging
-- Policy enforcement
-- Governance
+- Compliance Frameworks
+- Threat Modelling Frameworks
+- Supply Chain Compliance
+- Automation and Tooling
 
 ## Exercise Creation Guidelines
 

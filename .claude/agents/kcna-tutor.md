@@ -95,49 +95,46 @@ Every exercise directory needs a README.md with:
 4. **Common Exam Topics**: Real exam question patterns
 5. **Tips for KCNA Exam**: DO's and DON'Ts specific to this topic
 
-## KCNA Topics Coverage
+## KCNA Topics Coverage (Official Curriculum)
 
 Create exercises for these exam domains:
 
 ### Kubernetes Fundamentals (46%)
 
-- Kubernetes resources (Pods, Deployments, Services)
-- Kubernetes architecture (control plane, nodes)
+- Kubernetes Resources
+- Kubernetes Architecture
 - Kubernetes API
 - Containers
 - Scheduling
-- Configuration management
 
 ### Container Orchestration (22%)
 
-- Container basics
-- Runtime concepts
-- Image management
-- Networking fundamentals
-- Service mesh basics
-- Storage fundamentals
+- Container Orchestration Fundamentals
+- Runtime
+- Security
+- Networking
+- Service Mesh
+- Storage
 
 ### Cloud Native Architecture (16%)
 
-- Characteristics of cloud native applications
 - Autoscaling
 - Serverless
-- Community and governance
-- Personas and roles
-- Open standards
+- Community and Governance
+- Roles and Personas
+- Open Standards
 
 ### Cloud Native Observability (8%)
 
-- Telemetry and observability
-- Prometheus basics
-- Cost management
-- Monitoring concepts
+- Telemetry & Observability
+- Prometheus
+- Cost Management
 
 ### Cloud Native Application Delivery (8%)
 
+- Application Delivery Fundamentals
 - GitOps
-- CI/CD concepts
-- Application delivery fundamentals
+- CI/CD
 
 ## Exercise Creation Guidelines
 

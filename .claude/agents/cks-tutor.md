@@ -88,54 +88,56 @@ Every exercise directory needs a README.md with:
 4. **Common Exam Scenarios**: Real exam security question patterns
 5. **Tips for CKS Exam**: Security DO's and DON'Ts specific to this topic
 
-## CKS Topics Coverage
+## CKS Topics Coverage (Official v1.33 Curriculum)
 
-Create exercises for these exam domains:
+Create exercises for these exam domains based on Kubernetes v1.33:
 
-### Cluster Setup (10%)
+### Cluster Setup (15%)
 
-- Network policies (ingress/egress)
-- CIS benchmarks with kube-bench
-- GUI elements security
-- Verify platform binaries
+- Use network security policies to restrict cluster level access
+- Use CIS benchmark to review the security configuration of Kubernetes components (etcd, kubelet, kubedns, kubeapi)
+- Properly set up Ingress objects with security control
+- Protect node metadata and endpoints
+- Minimize use of, and access to, GUI elements
+- Verify platform binaries before deploying
 
 ### Cluster Hardening (15%)
 
-- RBAC with least privilege
-- Service account security
-- API server hardening
-- Upgrade clusters for security
+- Restrict access to Kubernetes API
+- Use Role Based Access Controls to minimize exposure
+- Exercise caution in using service accounts e.g. disable defaults, minimize permissions on newly created ones
+- Update Kubernetes frequently
 
-### System Hardening (15%)
+### System Hardening (10%)
 
-- AppArmor profiles
-- Seccomp profiles
-- Host security (PSP/PSA)
-- Reduce attack surface
+- Minimize host OS footprint (reduce attack surface)
+- Minimize IAM roles
+- Minimize external access to the network
+- Appropriately use kernel hardening tools such as AppArmor, seccomp
 
 ### Minimize Microservice Vulnerabilities (20%)
 
-- SecurityContext configuration
-- OPA/Gatekeeper policies
-- Secrets management
-- Container sandboxing (gVisor, Kata)
-- mTLS with service mesh
+- Setup appropriate OS level security domains e.g. using PSA, OPA, security contexts
+- Manage Kubernetes secrets
+- Use container runtime sandboxes in multi-tenant environments (e.g. gvisor, kata containers)
+- Implement pod to pod encryption by use of mTLS
 
 ### Supply Chain Security (20%)
 
-- Image scanning (Trivy, Clair)
-- Image signing and verification
-- Allowlist/blocklist registries
-- Static analysis
-- Secure image repositories
+- Minimize base image footprint
+- Secure your supply chain: whitelist allowed registries, sign and validate images
+- Use static analysis of user workloads (e.g. Kubernetes resources, Docker files)
+- Scan images for known vulnerabilities
 
 ### Monitoring, Logging, and Runtime Security (20%)
 
-- Falco for runtime security
-- Audit logs configuration
-- Detect threats in logs
-- Immutability
-- Anomaly detection
+- Perform behavioral analytics of syscall process and file activities at the host and container level to detect
+  malicious activities
+- Detect threats within physical infrastructure, apps, networks, data, users and workloads
+- Detect all phases of attack regardless of where it occurs and how it spreads
+- Perform deep analytical investigation and identification of bad actors within environment
+- Ensure immutability of containers at runtime
+- Use Audit Logs to monitor access
 
 ## Exercise Creation Guidelines
 

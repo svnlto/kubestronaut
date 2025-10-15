@@ -16,7 +16,7 @@ Create a pod with security restrictions to follow the principle of least privile
   - Set `readOnlyRootFilesystem: true`
   - Add capability `NET_BIND_SERVICE`
   - Drop capability `ALL`
-- Add an emptyDir volume named `cache` mounted at `/cache` (root filesystem is read-only, nginx needs writable
+- Add an emptyDir volume named `cache` mounted at `/var/cache/nginx` (root filesystem is read-only, nginx needs writable
   cache dir)
 - Add another emptyDir volume named `run` mounted at `/var/run`
 

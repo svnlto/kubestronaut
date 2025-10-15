@@ -89,48 +89,62 @@ Every exercise directory needs a README.md with:
 4. **Common Exam Scenarios**: Real exam question patterns
 5. **Tips for CKA Exam**: DO's and DON'Ts specific to this topic
 
-## CKA Topics Coverage
+## CKA Topics Coverage (Official v1.33 Curriculum)
 
-Create exercises for these exam domains:
+Create exercises for these exam domains based on Kubernetes v1.33:
 
 ### Cluster Architecture, Installation & Configuration (25%)
 
-- RBAC
-- Cluster upgrades
-- etcd backup and restore
-- High availability
-- Manage cluster components
+- Manage role-based access control (RBAC)
+- Prepare underlying infrastructure for installing a Kubernetes cluster
+- Create and manage a Kubernetes cluster using kubeadm
+- Manage the lifecycle of a Kubernetes cluster (upgrades)
+- Implement and configure a highly-available control plane
+- Use Helm and Kustomize to install cluster components
+- Understand extension interfaces (CNI, CSI, CRI, CRD, Aggregation Layer, Operators, Webhooks)
+- Utilize Custom Resource Definitions (CRDs)
+- Manage authentication, authorization, and networking between components
+- Backup and restore etcd data
 
 ### Workloads & Scheduling (15%)
 
-- Deployments and rollouts
-- ConfigMaps and Secrets
-- Scaling applications
-- Resource limits
-- Manifest management
+- Understand deployments and how to perform rolling updates and rollbacks
+- Use ConfigMaps and Secrets to configure applications
+- Know how to scale applications
+- Understand the primitives used to create robust, self-healing application deployments
+- Understand how resource limits can affect Pod scheduling
+- Understand Pod admission
+- Awareness of manifest management and common templating tools (Helm, Kustomize)
+- Understand autoscaling
+- Use node selectors, node affinity, pod affinity, and anti-affinity
 
 ### Services & Networking (20%)
 
-- Services and endpoints
-- Ingress controllers
-- Network policies
-- CoreDNS troubleshooting
-- CNI plugins
+- Understand host networking configuration on cluster nodes
+- Understand connectivity between Pods
+- Understand ClusterIP, NodePort, LoadBalancer service types and endpoints
+- Know how to use Ingress controllers and Ingress resources
+- Understand Gateway API for Ingress traffic management
+- Know how to configure and use CoreDNS
+- Understand CNI plugins
 
 ### Storage (10%)
 
-- Persistent Volumes and Claims
-- Storage Classes
-- Volume modes and access modes
-- Configure applications with persistent storage
+- Understand storage classes, persistent volumes
+- Understand volume mode, access modes and reclaim policies for volumes
+- Understand persistent volume claims primitive
+- Understand dynamic volume provisioning
+- Know how to configure applications with persistent storage
 
 ### Troubleshooting (30%)
 
-- Application failure
-- Control plane failure
-- Worker node failure
-- Network troubleshooting
-- Log analysis
+- Evaluate cluster and node logging
+- Understand how to monitor applications
+- Manage container stdout & stderr logs
+- Troubleshoot application failure
+- Troubleshoot cluster component failure
+- Troubleshoot networking
+- Troubleshoot control plane services and connectivity
 
 ## Exercise Creation Guidelines
 

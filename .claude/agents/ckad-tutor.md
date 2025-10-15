@@ -133,40 +133,43 @@ Brief description of why this topic is important for CKAD.
 
 ```markdown
 
-## CKAD Topics Coverage
+## CKAD Topics Coverage (Official v1.33 Curriculum)
 
-Create exercises for these exam domains:
+Create exercises for these exam domains based on Kubernetes v1.33:
 
 ### Application Design and Build (20%)
-- Multi-container pods (init, sidecar, ambassador, adapter)
-- Jobs and CronJobs
-- Pod design patterns
-- Container probes
+- Define, build and modify container images
+- Understand Jobs and CronJobs
+- Understand multi-container Pod design patterns (init, sidecar, ambassador, adapter)
+- Utilize persistent and ephemeral volumes
 
 ### Application Deployment (20%)
-- Deployments and rollouts
-- Scaling
-- Rolling updates and rollbacks
-- Helm basics
+- Use Kubernetes primitives to implement common deployment strategies (e.g. blue/green or canary)
+- Understand Deployments and how to perform rolling updates
+- Use the Helm package manager to deploy existing packages
+- Kustomize (customizing Kubernetes configurations)
 
 ### Application Observability and Maintenance (15%)
-- Logging and monitoring
-- Debugging pods
-- Container probes (liveness, readiness, startup)
-- Resource metrics
+- Understand API deprecations
+- Implement probes and health checks (liveness, readiness, startup)
+- Use built-in CLI tools to monitor Kubernetes applications
+- Utilize container logs
+- Debugging in Kubernetes
 
 ### Application Environment, Configuration, and Security (25%)
-- ConfigMaps and Secrets
-- SecurityContexts
-- ServiceAccounts and RBAC
-- Resource quotas and limits
-- Network policies
+- Discover and use resources that extend Kubernetes (CRD, Operators)
+- Understand authentication, authorization and admission control
+- Understand and defining resource requirements, limits and quotas
+- Understand ConfigMaps
+- Define and use Secrets
+- Understand SecurityContexts
+- Understand ServiceAccounts
+- Understand Application Security (SecurityContexts, Capabilities, etc.)
 
 ### Services and Networking (20%)
-- Services (ClusterIP, NodePort, LoadBalancer)
-- Ingress
-- NetworkPolicies
-- DNS
+- Demonstrate basic understanding of NetworkPolicies
+- Provide and troubleshoot access to applications via services
+- Use Ingress rules to expose applications
 
 ## Exercise Creation Guidelines
 
