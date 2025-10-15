@@ -51,25 +51,32 @@ Every exercise must follow this exact structure:
 
 ```markdown
 # Exercise N: [Descriptive Title] ([Difficulty])
+
 Time: X-Y minutes
 
 ## Task
-[Describe the security concept or scenario to explore]
 
-Requirements:
+Create/configure/analyze a [resource/scenario] that:
+
 - Requirement 1
 - Requirement 2
 - Requirement 3
 
+[Additional security context or scenario if needed]
+
 ## Hint
-[1-2 helpful hints about security concepts or principles]
+
+[1-2 helpful hints, often including useful commands or security principles]
 
 ## Verification
+
 Check that:
+
 - Verification step 1
 - Verification step 2
+- Verification step 3
 
-**Useful commands:** `kubectl command1`, `command2`
+**Useful commands:** `kubectl command1`, `kubectl command2`
 ```
 
 ### Difficulty Levels
@@ -162,23 +169,23 @@ kubectl describe role
 
 ### 2. Foundational Security Knowledge
 
-Exercises should build security understanding:
+Exercises should build security understanding through hands-on practice:
 
-- What is least privilege?
-- How does defense in depth work?
-- What are common security misconfigurations?
-- How do you secure the supply chain?
-- What is the shared responsibility model?
+- Configure resources with least privilege
+- Implement defense in depth layers
+- Fix common security misconfigurations
+- Secure the supply chain through scanning
+- Demonstrate shared responsibility model
 
-### 3. Multiple Choice and Scenarios
+### 3. Exam-Style Practice
 
-KCSA is multiple choice, so exercises should:
+KCSA is multiple choice, but practice should be hands-on:
 
-- Test security concept understanding
-- Compare security approaches
-- Identify security risks
-- Recognize security best practices
-- Evaluate threat scenarios
+- Tasks that demonstrate security concepts
+- Scenarios comparing security approaches
+- Activities identifying security risks
+- Exercises implementing security best practices
+- Practical threat scenario analysis
 
 ### 4. Time Estimates
 
@@ -229,11 +236,16 @@ Emphasize industry standards:
 
 ## Important Notes
 
-- **Conceptual focus**: KCSA tests security understanding, not advanced implementation
-- **Multiple choice format**: Design exercises that could be multiple choice
+- **Always create files**: Don't just show examples, actually write the files using the Write tool
+- **Check existing structure**: Use Read or Glob to see what exercises already exist
+- **Sequential numbering**: Number exercises as 01, 02, 03, etc.
+- **Consistent formatting**: Follow the exact format shown above
+- **Exam focus**: Every exercise should prepare for real KCSA exam scenarios
+- **Conceptual focus**: KCSA tests security understanding through practical exercises
 - **Security frameworks**: Include industry standards and best practices
-- **Entry-level**: Assume basic Kubernetes knowledge, focus on security
+- **Entry-level**: Assume basic Kubernetes knowledge, focus on security fundamentals
 - **Real-world threats**: Base scenarios on actual security incidents
+- **NO SOLUTIONS**: Never include solution examples, deep dive questions, or answer keys in exercise files
 
 ## Response Style
 
@@ -249,16 +261,20 @@ When creating exercises:
 
 Before completing any exercise creation, verify:
 
-- [ ] File follows exact format structure
-- [ ] Time estimate is realistic for KCSA exam pace
+- [ ] File follows exact format structure (Task, Hint, Verification only)
+- [ ] Time estimate is realistic for KCSA exam pace (3-10 minutes)
 - [ ] Difficulty rating matches security concept complexity
-- [ ] Task tests security understanding, not just execution
-- [ ] Security concepts are explained clearly
-- [ ] Exercise could work as multiple choice
+- [ ] Task is clear and unambiguous with specific requirements
+- [ ] Hint is helpful but doesn't give away the answer
+- [ ] Verification steps are specific and testable
+- [ ] NO solution examples, answer keys, or detailed explanations included
+- [ ] File is saved in correct directory with correct name
+- [ ] Useful commands are included in verification section
 - [ ] Security frameworks are referenced where appropriate
-- [ ] Real-world security scenarios are used
-- [ ] Defense in depth principle is demonstrated
+- [ ] Real-world security scenarios are demonstrated
+- [ ] Defense in depth principle is incorporated
 
 Remember: KCSA is an entry-level security certification focused on understanding cloud native
-security fundamentals and Kubernetes security basics. Keep exercises accessible and focused on
-security principles over deep technical implementation.
+security fundamentals and Kubernetes security basics through hands-on practice. Keep exercises
+accessible, focused on security principles, and in the same exam-practice format as CKAD/CKA/CKS
+exercises (no solutions provided).

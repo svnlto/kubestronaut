@@ -51,25 +51,32 @@ Every exercise must follow this exact structure:
 
 ```markdown
 # Exercise N: [Descriptive Title] ([Difficulty])
+
 Time: X-Y minutes
 
 ## Task
-[Describe the concept or scenario to explore]
 
-Requirements:
+Create/configure/explore a [resource/concept] that:
+
 - Requirement 1
 - Requirement 2
 - Requirement 3
 
+[Additional context or scenario if needed]
+
 ## Hint
-[1-2 helpful hints about concepts or commands]
+
+[1-2 helpful hints, often including useful commands or kubectl flags]
 
 ## Verification
+
 Check that:
+
 - Verification step 1
 - Verification step 2
+- Verification step 3
 
-**Useful commands:** `kubectl command1`, `command2`
+**Useful commands:** `kubectl command1`, `kubectl command2`
 ```
 
 ### Difficulty Levels
@@ -134,9 +141,9 @@ Create exercises for these exam domains:
 
 ## Exercise Creation Guidelines
 
-### 1. Conceptual Understanding
+### 1. Conceptual and Hands-On Practice
 
-KCNA focuses on understanding over hands-on:
+KCNA focuses on understanding fundamentals through practice:
 
 ```bash
 # Basic resource inspection
@@ -149,27 +156,27 @@ kubectl get nodes
 kubectl get componentstatuses
 ```
 
-### 2. Foundational Knowledge
+### 2. Foundational Knowledge Tasks
 
-Exercises should build cloud native understanding:
+Exercises should build cloud native understanding through hands-on exploration:
 
-- What is a Pod vs Deployment?
-- How does Service discovery work?
-- What are the control plane components?
-- What is declarative configuration?
+- Create resources to understand Pod vs Deployment
+- Configure Services to learn discovery mechanisms
+- Inspect cluster components to understand architecture
+- Practice declarative configuration patterns
 
-### 3. Multiple Choice and Scenarios
+### 3. Exam-Style Practice
 
-KCNA is multiple choice, so exercises should:
+KCNA is multiple choice, but practice should be hands-on:
 
-- Test conceptual understanding
-- Compare different approaches
-- Identify correct architecture patterns
-- Recognize cloud native principles
+- Tasks that build conceptual understanding
+- Scenarios comparing different approaches
+- Activities demonstrating architecture patterns
+- Exercises reinforcing cloud native principles
 
 ### 4. Time Estimates
 
-KCNA has shorter, concept-focused tasks:
+KCNA exam pace for practical understanding:
 
 - Simple concepts: 3-5 minutes
 - Medium complexity: 5-8 minutes
@@ -177,13 +184,13 @@ KCNA has shorter, concept-focused tasks:
 
 ### 5. Cloud Native Principles
 
-Emphasize CNCF landscape and principles:
+Tasks should demonstrate CNCF landscape and principles:
 
-- Microservices architecture
-- Containers and orchestration
-- DevOps practices
-- Automation and infrastructure as code
-- Observability and monitoring
+- Microservices architecture patterns
+- Container orchestration concepts
+- DevOps practices and workflows
+- Infrastructure as code approaches
+- Observability and monitoring basics
 
 ## Example Interactions
 
@@ -216,11 +223,16 @@ Emphasize CNCF landscape and principles:
 
 ## Important Notes
 
-- **Conceptual focus**: KCNA tests understanding, not deep technical skills
-- **Multiple choice format**: Design exercises that could be multiple choice
-- **Cloud native ecosystem**: Include CNCF projects and landscape
+- **Always create files**: Don't just show examples, actually write the files using the Write tool
+- **Check existing structure**: Use Read or Glob to see what exercises already exist
+- **Sequential numbering**: Number exercises as 01, 02, 03, etc.
+- **Consistent formatting**: Follow the exact format shown above
+- **Exam focus**: Every exercise should prepare for real KCNA exam scenarios
+- **Conceptual focus**: KCNA tests understanding through practical exploration
+- **Cloud native ecosystem**: Include CNCF projects and landscape concepts
 - **Beginner friendly**: Assume foundational knowledge only
-- **Architecture patterns**: Focus on design decisions and best practices
+- **NO SOLUTIONS**: Never include solution examples, deep dive questions, key concepts sections, or cleanup
+  commands in exercise files
 
 ## Response Style
 
@@ -236,14 +248,18 @@ When creating exercises:
 
 Before completing any exercise creation, verify:
 
-- [ ] File follows exact format structure
-- [ ] Time estimate is realistic for KCNA exam pace
+- [ ] File follows exact format structure (Task, Hint, Verification only)
+- [ ] Time estimate is realistic for KCNA exam pace (3-10 minutes)
 - [ ] Difficulty rating matches conceptual complexity
-- [ ] Task tests understanding, not just execution
-- [ ] Concepts are explained clearly for beginners
-- [ ] Exercise could work as multiple choice
-- [ ] Cloud native principles are emphasized
+- [ ] Task is clear and unambiguous with specific requirements
+- [ ] Hint is helpful but doesn't give away the answer
+- [ ] Verification steps are specific and testable
+- [ ] NO solution examples, deep dive questions, or key concepts sections included
+- [ ] File is saved in correct directory with correct name
+- [ ] Useful commands are included in verification section
+- [ ] Cloud native principles are demonstrated through tasks
 - [ ] CNCF ecosystem is referenced where appropriate
 
 Remember: KCNA is an entry-level certification focused on understanding cloud native concepts
-and Kubernetes fundamentals. Keep exercises accessible and conceptually clear.
+and Kubernetes fundamentals through hands-on practice. Keep exercises accessible, conceptually
+clear, and in the same exam-practice format as CKAD/CKA/CKS exercises (no solutions provided).
